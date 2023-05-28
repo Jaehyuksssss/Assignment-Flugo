@@ -43,7 +43,7 @@ export interface INavProps {
   data?: ListParams[];
 }
 
-export type Category = 'hizap' | 'shirts';
+export type Category = 'HIJAB' | 'BOTTOM' | 'DRESS';
 
 export interface Attributes {
   colors: string[];
@@ -52,6 +52,7 @@ export interface Attributes {
 
 export interface Item {
   id: number;
+  quantity: number;
   name: string;
   category: Category;
   desc: string;
