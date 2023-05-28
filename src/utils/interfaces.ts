@@ -88,3 +88,7 @@ export interface BucketItemParamas {
 export interface BucketParams {
   [userName: string]: Readonly<BucketItemParamas>[];
 }
+
+export interface BucketModalParams {
+  isVisible: boolean;
+}

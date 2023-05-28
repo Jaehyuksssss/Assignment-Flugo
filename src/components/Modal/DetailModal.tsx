@@ -33,7 +33,7 @@ import {
   AddButtonContainer,
   AddToButton,
 } from './DetailModal.styles';
-import { userBucket } from '../../atom/bucketAtom';
+import { bucketModal, userBucket } from '../../atom/bucketAtom';
 
 interface DetailModalProps {
   onClose: () => void;
@@ -42,6 +42,7 @@ interface DetailModalProps {
 export const DetailModal: React.FC<DetailModalProps> = ({ onClose }) => {
   const [detailModalState, setDetailModalState] = useRecoilState<Partial<DetailItemParams>>(detailModal);
   const [userBucketState, setUserBucketState] = useRecoilState<BucketParams>(userBucket);
+  const [bucketModalState, setBucketModalState] = useRecoilState(bucketModal);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
@@ -50,6 +51,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({ onClose }) => {
     size: '',
     quantity: 0,
   });
+  console.log('bucketModal', bucketModalState);
 
   useEffect(() => {
     setSelectedItems({
@@ -92,14 +94,12 @@ export const DetailModal: React.FC<DetailModalProps> = ({ onClose }) => {
     };
     setSelectedItems(updatedSelectedItem);
 
-    // not exists user
     if (!userBucketState[name]) {
       setUserBucketState({
         ...userBucketState,
         [name]: [updatedSelectedItem],
       });
     } else {
-      // exists user
       setUserBucketState({
         ...userBucketState,
         [name]: [...userBucketState[name], updatedSelectedItem],
@@ -107,10 +107,13 @@ export const DetailModal: React.FC<DetailModalProps> = ({ onClose }) => {
     }
 
     alert('The product has been successfully added to your shopping cart.');
-    // Delete
+
     setDetailModalState({
       ...detailModalState,
       isVisible: false,
+    });
+    setBucketModalState({
+      isVisible: true,
     });
   };
 
