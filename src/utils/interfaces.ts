@@ -60,3 +60,16 @@ export interface Item {
   attribute: Attributes;
   thumbnail: string;
 }
+
+export interface FilterItemParams {
+  id: number;
+  title: string;
+  path: string;
+}
+export interface FilterModalParams {
+  isVisible: boolean;
+  filterKeys: string[];
+}
+export interface DetailItemParams extends Item {
+  isVisible: boolean;
+}
