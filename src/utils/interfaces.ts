@@ -42,3 +42,21 @@ export interface INavMenuProps {
 export interface INavProps {
   data?: ListParams[];
 }
+
+export type Category = 'hizap' | 'shirts';
+
+export interface Attributes {
+  colors: string[];
+  sizes: string[];
+}
+
+export interface Item {
+  id: number;
+  category: Category;
+  desc: string;
+  price: number;
+  currency: string;
+  purchase_count: number;
+  attribute: Attributes;
+  thumbnail: string;
+}
