@@ -1,3 +1,5 @@
+import HomeTemplate from '../../containers/Home/HomeTemplate';
+
 export default function ListPage() {
-  return <div></div>;
+  return <HomeTemplate />;
 }

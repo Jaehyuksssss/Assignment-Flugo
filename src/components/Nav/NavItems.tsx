@@ -1,12 +1,8 @@
-import { NavItemsParams } from '../../utils/NavConstants';
 import { NavItemSpan, NavItemWrapper } from './Nav.styles';
 import { useState } from 'react';
 import Dropdown from './DropDown';
 import { Link } from 'react-router-dom';
-
-interface INavMenuProps {
-  data: NavItemsParams;
-}
+import { INavMenuProps } from '../../utils/interfaces';
 
 export default function NavItems({ data }: INavMenuProps) {
   const [dropdown, setDropdown] = useState<boolean>(false);

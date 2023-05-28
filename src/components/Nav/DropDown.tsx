@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { DropdownWrapper, DropdownItem, DropdownLink } from './Nav.styles';
-import { ListParams } from '../../utils/NavConstants';
+import { INavProps } from '../../utils/interfaces';
 
-interface Props {
-  data?: ListParams[];
-}
-export default function DropdownMenu({ data }: Props) {
+export default function DropdownMenu({ data }: INavProps) {
   const [dropdown, setDropdown] = useState(false);
 
   const handleDropdownItemClick = () => {

@@ -1,7 +1,8 @@
 import { NavContainer, IconWrapper, SearchIcon, Logo, UserIcon, NavItemWrapper, NavItemSpan } from './Nav.styles';
 import { Link } from 'react-router-dom';
 import NavItems from './NavItems';
-import { NAV_ITEMS, NavItemsParams } from '../../utils/NavConstants';
+import { NavItemsParams } from '../../utils/interfaces';
+import { NAV_ITEMS } from '../../utils/NavConstants';
 
 export default function Nav() {
   return (

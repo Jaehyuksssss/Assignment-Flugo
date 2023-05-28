@@ -1,18 +1,5 @@
-type tagType = 'HOME' | 'NEW ARRIVALS' | 'CATEGORIES' | 'DEFECT SALE' | 'ALL PRODUCT' | 'HOW TO ORDER';
+import { NavItemsParams } from './interfaces';
 
-export interface ListParams {
-  title: string;
-  link: string;
-}
-
-export interface NavItemsParams {
-  id: number;
-  tag: tagType;
-  title: string;
-  path: string;
-  isDropDown: boolean;
-  downList?: ListParams[];
-}
 export const NAV_ITEMS: NavItemsParams[] = [
   {
     id: 1,
