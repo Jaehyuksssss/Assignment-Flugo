@@ -75,3 +75,16 @@ export interface FilterModalParams {
 export interface DetailItemParams extends Item {
   isVisible: boolean;
 }
+
+export interface BucketItemParamas {
+  uuid?: string;
+  id: number;
+  name: string;
+  quantity: number;
+  size: string;
+  color: string;
+}
+
+export interface BucketParams {
+  [userName: string]: Readonly<BucketItemParamas>[];
+}
