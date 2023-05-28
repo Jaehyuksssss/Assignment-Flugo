@@ -44,7 +44,24 @@ export const ItemWrapper = styled.div`
   margin-bottom: 0.5rem;
   border-radius: 4px;
 `;
+export const ItemContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
+export const ItemInfo = styled.div`
+  flex: 1;
+`;
+
+export const DeleteButton = styled.button`
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: ${theme.RED};
+  cursor: pointer;
+  padding-right: 3rem;
+`;
 export const PurchaseWrapper = styled.div`
   display: flex;
   justify-content: center;

@@ -26,12 +26,14 @@ export default function ItemList() {
         <StyledItem key={item.id}>
           <ItemListWrapper onClick={(e) => modalHandler(e, item)}>
             <StyledImage src={item.thumbnail} alt={item.desc} />
-            <span>{item.name}</span>
-            <p>{item.desc}</p>
-            <p>
-              {item.currency}
-              {item.price}
-            </p>
+            <div>
+              <span>{item.name}</span>
+              <p>{item.desc}</p>
+              <p>
+                {item.currency}
+                {item.price}
+              </p>
+            </div>
           </ItemListWrapper>
         </StyledItem>
       ))}

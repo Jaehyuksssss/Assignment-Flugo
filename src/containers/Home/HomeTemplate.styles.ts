@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const ListTemplateLayout = styled.div``;
-export const HomeBannerWrapper = styled.div`
-  padding: 0 32px;
-`;
+export const HomeBannerWrapper = styled.div``;
 export const ItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
