@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { RecoilRoot } from "recoil";
-import GlobalStyle from "./styles/globalStyles";
-import { QueryClient, QueryClientProvider } from "react-query";
-import ListPage from "./pages/Home/ListPage";
-import CartDetail from "./pages/CartDetail/CartDetail";
-import Nav from "./components/Nav/Nav";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import GlobalStyle from './styles/globalStyles';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import CartDetail from './pages/CartDetail/CartDetail';
+import Nav from './components/Nav/Nav';
+import ListPage from './pages/Home/ListPage';
 
 const queryClient = new QueryClient();
 
