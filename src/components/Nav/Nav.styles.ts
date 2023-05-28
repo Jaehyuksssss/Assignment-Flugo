@@ -88,7 +88,7 @@ export const DropdownWrapper = styled.div`
   height: auto;
 `;
 
-export const DropdownItem = styled.div`
+export const DropdownItemWrap = styled.div`
   padding: 10px;
   background-color: white;
   &:hover {
@@ -96,7 +96,15 @@ export const DropdownItem = styled.div`
   }
 `;
 
-export const DropdownLink = styled(Link)`
+export const DropdownItem = styled(Link)`
+  /* padding: 10px;
+  background-color: white;
+  &:hover {
+    background-color: #ddd;
+  } */
+`;
+
+export const DropdownLink = styled.div`
   color: black;
   text-decoration: none;
 `;

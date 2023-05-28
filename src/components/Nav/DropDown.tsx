@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DropdownWrapper, DropdownItem, DropdownLink } from './Nav.styles';
+import { DropdownWrapper, DropdownItem, DropdownLink, DropdownItemWrap } from './Nav.styles';
 import { INavProps } from '../../utils/interfaces';
 
 export default function DropdownMenu({ data }: INavProps) {
@@ -15,11 +15,11 @@ export default function DropdownMenu({ data }: INavProps) {
         {data &&
           data.map((item, index) => {
             return (
-              <DropdownItem key={item.title}>
-                <DropdownLink to={item.link} onClick={handleDropdownItemClick}>
-                  {item.title}
-                </DropdownLink>
-              </DropdownItem>
+              <DropdownItemWrap key={item.title} onClick={handleDropdownItemClick}>
+                <DropdownItem to={item.link}>
+                  <DropdownLink>{item.title}</DropdownLink>
+                </DropdownItem>
+              </DropdownItemWrap>
             );
           })}
       </div>
