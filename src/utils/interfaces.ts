@@ -52,6 +52,7 @@ export interface Attributes {
 
 export interface Item {
   id: number;
+  name: string;
   category: Category;
   desc: string;
   price: number;

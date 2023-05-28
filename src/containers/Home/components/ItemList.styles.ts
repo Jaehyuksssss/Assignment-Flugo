@@ -20,6 +20,10 @@ export const StyledItem = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+  span {
+    font-size: 24px;
+    font-weight: bold;
+  }
   p {
     font-size: 15px;
   }

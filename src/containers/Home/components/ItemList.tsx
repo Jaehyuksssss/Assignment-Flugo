@@ -13,6 +13,7 @@ export default function ItemList() {
       {itemList.map((item) => (
         <StyledItem key={item.id}>
           <StyledImage src={item.thumbnail} alt={item.desc} />
+          <span>{item.name}</span>
           <p>{item.desc}</p>
           <p>Price ($): {item.price}</p>
         </StyledItem>
