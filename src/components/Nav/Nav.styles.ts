@@ -1,13 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const NavContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 64px;
-`;
-
 export const Logo = styled.img`
   width: 100px;
 `;
@@ -20,6 +13,18 @@ export const NavItemWrapper = styled.div`
   }
 `;
 
+export const NavContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 64px;
+
+  @media (max-width: 768px) {
+    ${NavItemWrapper} {
+      display: none;
+    }
+  }
+`;
 export const NavItemSpan = styled.span`
   padding: 10px;
   display: flex;
