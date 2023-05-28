@@ -24,7 +24,6 @@ export default function Filter() {
           </FilterTitle>
         ))}
       </FilterTitleWrapper>
-      <FilterButton>Filter</FilterButton>
     </FilterContainer>
   );
 }

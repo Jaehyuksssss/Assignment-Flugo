@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   ModalActions,
   ContinueShoppingButton,
@@ -13,12 +13,20 @@ import { bucketModal } from '../../atom/bucketAtom';
 
 const AddedToCartModal = () => {
   const [bucketModalState, setBucketModalState] = useRecoilState(bucketModal);
+  const navigate = useNavigate();
+
   const closeBucketModal = () => {
     setBucketModalState({
       ...bucketModalState,
       isVisible: false,
     });
   };
+
+  const goToCart = () => {
+    navigate(`/cartdetail`);
+    closeBucketModal();
+  };
+
   return (
     <ModalOverlay>
       <ModalWrapper>
@@ -28,9 +36,7 @@ const AddedToCartModal = () => {
         </ModalContent>
         <ModalActions>
           <ContinueShoppingButton onClick={closeBucketModal}>Continue Shopping</ContinueShoppingButton>
-          <Link to="/cartdetail">
-            <GoToCartButton>Go to Cart</GoToCartButton>
-          </Link>
+          <GoToCartButton onClick={goToCart}>Go to Cart</GoToCartButton>
         </ModalActions>
       </ModalWrapper>
     </ModalOverlay>

@@ -169,16 +169,8 @@ export const DetailModal: React.FC<DetailModalProps> = ({ onClose }) => {
               </Table>
             </TableDescription>
             <ModalDescription>
-              <ColorsContainer>
-                {detailModalState.attribute?.colors?.map((color) => (
-                  <ColorSpan key={color}>{color}</ColorSpan>
-                ))}
-              </ColorsContainer>
-              <SizesContainer>
-                {detailModalState.attribute?.sizes?.map((size) => (
-                  <SizeSpan key={size}>{size}</SizeSpan>
-                ))}
-              </SizesContainer>
+              <ColorsContainer></ColorsContainer>
+              <SizesContainer></SizesContainer>
             </ModalDescription>
             <QuantityContainer>
               <QuantityLabel>Quantity:</QuantityLabel>

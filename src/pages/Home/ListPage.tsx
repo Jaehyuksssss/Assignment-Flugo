@@ -8,7 +8,7 @@ import BucketModal from '../../components/Modal/BucketModal';
 
 export default function ListPage() {
   const [detailModalState, setDetailModalState] = useRecoilState<Partial<DetailItemParams>>(detailModal);
-  const [bucketModalState, setBucketModalState] = useRecoilState(bucketModal);
+  const [bucketModalState] = useRecoilState(bucketModal);
   const closeDetailModal = () => {
     setDetailModalState({
       ...detailModalState,
