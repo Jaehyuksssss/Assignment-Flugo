@@ -1,4 +1,4 @@
-# e-commerce site 만들기
+# e-commerce site
 
 - 원본 사이트 : [gonegani](https://gonegani.id/home)
 - 개발 인원 : 1인 (임재혁)
