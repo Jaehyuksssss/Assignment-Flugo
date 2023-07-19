@@ -3,6 +3,7 @@
 - 원본 사이트 : [gonegani](https://gonegani.id/home)
 - 개발 인원 : 1인 (임재혁)
 - 빈페이지는 : '상품이 준비중입니다.' 로 처리 하였습니다.
+- 회고 : [회고](https://jaehyuksss.tistory.com/25)
 
 > 구현 사항
 
